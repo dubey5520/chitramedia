@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Chitrasway Media — Premier post-production studio in Lucknow. Video editing, motion graphics, color grading & AI-powered ads." />
+  <title>Chitrasway Media — Stop The Scroll. Start The Scale.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ══════════ LOADER ══════════ -->
+<div id="loader" role="status" aria-label="Loading">
+  <div class="loader-logo">CHITRASWAY<span>.</span></div>
+  <div class="loader-bar-track"><div class="loader-bar-fill"></div></div>
+  <div class="loader-text">Loading Experience…</div>
+</div>
+
+<!-- ══════════ FLOATING BUTTONS ══════════ -->
+<a href="https://wa.me/+919696228120?text=Hi%20Chitrasway%2C%20I%27m%20interested%20in%20your%20services!"
+   class="wa-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <div class="wa-pulse"></div>
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<a href="https://instagram.com/chitraswaymedia" target="_blank" rel="noopener"
+   class="ig-btn" aria-label="Follow on Instagram">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+    <circle cx="12" cy="12" r="4"/>
+    <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/>
+  </svg>
+</a>
+
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">🌙</button>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+    <path d="M3 10l5-5 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+
+<!-- ══════════ NAV ══════════ -->
+ <nav id="navbar" role="navigation" aria-label="Main navigation">
+  <a href="#" class="nav-logo" aria-label="Chitrasway Media Home">CHITRASWAY<span>.</span></a>
+  
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+    <span class="bar bar-1"></span>
+    <span class="bar bar-2"></span>
+    <span class="bar bar-3"></span>
+  </button>
+</nav>
+
+<ul class="nav-links" id="navLinks" role="list">
+  <li><a href="#services">Services</a></li>
+  <li><a href="#ring">Reels</a></li>
+  <li><a href="#featured-reels">Work</a></li>
+  <li><a href="#workflow">Process</a></li>
+  <li><a href="#why">Why Us</a></li>
+  <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+</ul>
+
+
+<!-- ══════════ HERO ══════════ -->
+<section id="hero" aria-label="Hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Lucknow's Premier Post-Production Studio</div>
+    <h1 class="hero-headline">
+      <span class="line-1">STOP THE</span>
+      <span class="line-2">
+        <span class="word-static">SCROLL.</span>
+        <span class="edit-slash">/</span>
+        <span class="word-dynamic" id="dynamicWord">
+          <span id="typewriterText"></span>
+          <span class="typewriter-cursor" aria-hidden="true"></span>
+        </span>
+      </span>
+    </h1>
+    <p class="hero-sub">
+      Professional video editing, motion design, and post-production for creators, brands, and agencies that refuse to blend in. We transform raw footage into content that drives attention, retention, and growth.
+    </p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn-primary">Scale Your Content Strategy</a>
+      <a href="#featured-reels" class="btn-secondary">View Selected Work</a>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <div class="scroll-line"></div>
+    <span class="scroll-text">Scroll</span>
+  </div>
+</section>
+
+<!-- ══════════ RING CAROUSEL ══════════ -->
+<section id="ring" aria-label="Reels showcase">
+  <div class="ring-scene" id="ringScene">
+    <div class="ring-track" id="ringTrack"></div>
+  </div>
+  <div class="ring-fog-radial" aria-hidden="true"></div>
+  <div class="ring-fog-bottom" aria-hidden="true"></div>
+  <button class="ring-nav ring-nav-prev" id="ringPrev" aria-label="Previous clip">
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11 4L6 9l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <button class="ring-nav ring-nav-next" id="ringNext" aria-label="Next clip">
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M7 4l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <div class="ring-now-playing" id="ringNowPlaying" aria-live="polite">
+    <span class="ring-live-dot" aria-hidden="true"></span>
+    <span id="ringNowLabel">Creative Reels</span>
+  </div>
+</section>
+
+<!-- ══════════ SHOWREEL ══════════ -->
+
+<section id="showreel" aria-label="Showreel" style="height: fit-content;">
+  <div class="showreel-stage">
+    <video id="showreelVideo" class="showreel-video active" autoplay muted playsinline preload="none"></video>
+    <div class="showreel-overlay-top" aria-hidden="true"></div>
+    <div class="showreel-overlay-bottom" aria-hidden="true"></div>
+    <div class="showreel-meta">
+      <div class="showreel-label" id="showreelLabel">Showreel</div>
+      <div class="showreel-title" id="showreelTitle">Loading…</div>
+    </div>
+    <div class="showreel-dots" id="showreelDots" role="tablist" aria-label="Showreel navigation"></div>
+    <div class="showreel-progress" aria-hidden="true"><div class="showreel-progress-bar" id="showreelProgress"></div></div>
+  </div>
+
+
+<!-- ══════════ TICKER ══════════ -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker-track">
+    <span class="ticker-item">Video Editing <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Motion Graphics <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Color Grading <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Commercial Post-Production <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Social Media Content <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Reels &amp; Short-Form <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Brand Films <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Product Ads <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Real Estate Tours <span class="ticker-dot"></span></span>
+    <span class="ticker-item">24–48 Hour Turnaround <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Video Editing <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Motion Graphics <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Color Grading <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Commercial Post-Production <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Social Media Content <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Reels &amp; Short-Form <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Brand Films <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Product Ads <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Real Estate Tours <span class="ticker-dot"></span></span>
+    <span class="ticker-item">24–48 Hour Turnaround <span class="ticker-dot"></span></span>
+  </div>
+</div>
+</section>
+<!-- ══════════ VALUE PROP ══════════ -->
+<section id="value">
+  <div class="container">
+    <div class="value-grid">
+      <div class="value-left reveal">
+        <div class="section-eyebrow">Our Approach</div>
+        <h2 class="section-title">Precision-<br>Engineered<br>Storytelling</h2>
+      </div>
+      <div class="value-right reveal">
+        <p>In today's attention economy, <strong>visibility isn't enough.</strong><br>Retention is everything.</p>
+        <p>At Chitrasway Media, we combine strategic storytelling, advanced post-production, motion design, and high-retention editing techniques to create content that captures attention and keeps audiences engaged.</p>
+        <p>Every cut, transition, sound design element, and motion sequence is built with <strong>performance in mind.</strong></p>
+        <div class="value-stats">
+          <div class="stat-card reveal"><div class="stat-num">48H</div><div class="stat-label">Maximum Turnaround Time</div></div>
+          <div class="stat-card reveal"><div class="stat-num">100+</div><div class="stat-label">Projects Delivered</div></div>
+          <div class="stat-card reveal"><div class="stat-num">6+</div><div class="stat-label">Platforms Optimized For</div></div>
+          <div class="stat-card reveal"><div class="stat-num">∞</div><div class="stat-label">Revisions Till Perfect</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SERVICES ══════════ -->
+<section id="services">
+  <div class="container">
+    <div class="services-header">
+      <div>
+        <div class="section-eyebrow">What We Do</div>
+        <h2 class="section-title reveal">Built For<br>Modern Content</h2>
+      </div>
+      <a href="#contact" class="btn-secondary reveal">Get a Quote →</a>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal" data-service="editing"    data-video="video/anuragdubeycs01.mp4"   data-thumb="thumbnails/logo.jpg"  data-label="Video Editing"           data-filter="reels">
+        <div class="service-num">01</div>
+        <div class="service-name">Video Editing</div>
+        <div class="service-desc">High-retention edits engineered for maximum watch time, platform algorithm performance, and audience engagement.</div>
+        <div class="service-footer">
+          <span class="service-tag">Reels · Shorts · Long-form</span>
+          <span class="service-cta-arrow">Watch Reel <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </div>
+      <div class="service-card reveal" data-service="motion"    data-video="video/anuragdubeycs02_1.mp4" data-thumb="thumbnails/logo2.jpg" data-label="Motion Graphics"         data-filter="motion">
+        <div class="service-num">02</div>
+        <div class="service-name">Motion Graphics</div>
+        <div class="service-desc">Custom animations, lower thirds, transitions, and visual sequences that elevate your content above the noise.</div>
+        <div class="service-footer">
+          <span class="service-tag">2D · 3D · Kinetic Type</span>
+          <span class="service-cta-arrow">See Work <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </div>
+      <div class="service-card reveal" data-service="commercial" data-video="video/anuragdubeycs04.mp4" data-thumb="thumbnails/logo3.jpg" data-label="Commercial Post-Production" data-filter="commercials">
+        <div class="service-num">03</div>
+        <div class="service-name">Commercial Post-Production</div>
+        <div class="service-desc">Professional finishing for advertising campaigns — color, sound, VFX, and delivery optimized for broadcast and digital.</div>
+        <div class="service-footer">
+          <span class="service-tag">TVC · Digital · OTT</span>
+          <span class="service-cta-arrow">See Work <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </div>
+      <div class="service-card reveal" data-service="color"     data-video="video/anuragdubeycs03.mp4"  data-thumb="thumbnails/logo4.jpg" data-label="Color Grading"           data-filter="reels">
+        <div class="service-num">04</div>
+        <div class="service-name">Color Grading</div>
+        <div class="service-desc">Cinematic color science applied to establish a consistent, recognizable visual identity across every project.</div>
+        <div class="service-footer">
+          <span class="service-tag">LUT · DaVinci · ACES</span>
+          <span class="service-cta-arrow">Preview <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </div>
+      <div class="service-card reveal" data-service="social"    data-video="video/Create-withcs1805.mp4" data-thumb="thumbnails/logo.jpg" data-label="Social Media Content"    data-filter="reels">
+        <div class="service-num">05</div>
+        <div class="service-name">Social Media Content</div>
+        <div class="service-desc">Reels, shorts, and platform-native content systems designed to fuel consistent growth and organic reach.</div>
+        <div class="service-footer">
+          <span class="service-tag">Meta · YouTube · LinkedIn</span>
+          <span class="service-cta-arrow">See Reels <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </div>
+      <div class="service-card reveal" data-service="consulting" data-video="video/anuragdubeycs05.mp4" data-thumb="thumbnails/logo5.jpg" data-label="Creative Consulting"     data-filter="motion">
+        <div class="service-num">06</div>
+        <div class="service-name">Creative Consulting</div>
+        <div class="service-desc">Strategic guidance on content structure, format, and cadence to build a system that scales with your brand.</div>
+        <div class="service-footer">
+          <span class="service-tag">Strategy · Scripting · Direction</span>
+          <span class="service-cta-arrow">Learn More <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SERVICE VIDEO WRAPPER ══════════ -->
+<div class="svc-wrapper" id="svcWrapper" role="dialog" aria-modal="true" aria-label="Service preview">
+  <div class="svc-backdrop" id="svcBackdrop"></div>
+  <div class="svc-panel" id="svcPanel">
+    <div class="svc-video-col">
+      <div class="svc-video-frame">
+        <video id="svcVideo" muted autoplay loop playsinline></video>
+        <div class="svc-video-overlay" aria-hidden="true"></div>
+        <div class="svc-live-badge"><span class="svc-dot" aria-hidden="true"></span> PREVIEW</div>
+      </div>
+      <div class="svc-strip" id="svcStrip" role="list" aria-label="Other services"></div>
+    </div>
+    <div class="svc-info-col">
+      <button class="svc-close" id="svcClose" aria-label="Close preview">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 2l12 12M14 2L2 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+      <div class="svc-eyebrow" id="svcEyebrow">Service Preview</div>
+      <h3 class="svc-title" id="svcTitle">—</h3>
+      <p class="svc-body" id="svcBody"></p>
+      <div class="svc-features" id="svcFeatures"></div>
+      <div class="svc-actions">
+        <a href="#featured-reels" class="btn-primary" id="svcSeeWork">See All Work →</a>
+        <a href="#contact" class="btn-secondary">Get a Quote</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ FEATURED REELS STRIP ══════════ -->
+<!-- NOTE: Single unique ID "featured-reels" — removed duplicate #portfolio -->
+<section id="featured-reels">
+  <div class="container">
+    <div class="reels-header">
+      <div>
+        <div class="section-eyebrow">Featured Reels</div>
+        <h2 class="section-title reveal">Watch Our Work</h2>
+      </div>
+      <a href="https://instagram.com/chitraswaymedia" target="_blank" rel="noopener" class="ig-follow-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/>
+        </svg>
+        Follow @chitraswaymedia
+      </a>
+    </div>
+  </div>
+
+  <div class="reels-strip-wrapper">
+    <div class="reels-strip" id="reelsStrip">
+      <div class="reel-card" data-video="https://res.cloudinary.com/idohvgwz/video/upload/v1784306569/final_video_i6vvbz.mp4" data-thumb="thumbnails/logo.jpg">
+        <img class="reel-thumb" src="thumbnails/Gemini_Generated_Image_pb7a0ypb7a0ypb7a.png" alt="Lifestyle Brand Campaign" loading="lazy">
+        <video class="reel-video" src="https://res.cloudinary.com/idohvgwz/video/upload/v1784317649/DomsXKomal_compress_foilxu.mp4" muted loop playsinline preload="none"></video>
+        <div class="reel-overlay">
+          <span class="reel-badge">Commercial</span>
+          <div class="reel-play"><svg width="14" height="16" viewBox="0 0 14 16" fill="none"><path d="M1 1l12 7L1 15V1z" fill="#fff"/></svg></div>
+          <div class="reel-title">Promotional Event</div>
+        </div>
+      </div>
+
+      <div class="reel-card" data-thumb="thumbnails/logo2.jpg">
+        <img class="reel-thumb" src="thumbnails/launchsoon.mp4.00_00_00_08.Still001.png" alt="Corporate Identity Film" loading="lazy">
+        <video class="reel-video" preload="none" src="https://res.cloudinary.com/idohvgwz/video/upload/v1784302235/launchsoon_c7hs2c.mp4" muted loop playsinline preload="none"></video>
+        <div class="reel-overlay">
+          <span class="reel-badge">Commercial</span>
+          <div class="reel-play"><svg width="14" height="16" viewBox="0 0 14 16" fill="none"><path d="M1 1l12 7L1 15V1z" fill="#fff"/></svg></div>
+          <div class="reel-title">Launch Event</div>
+        </div>
+      </div>
+
+      <div class="reel-card" data-video="video/anuragdubeycs01.mp4" data-thumb="thumbnails/logo4.jpg">
+        <img class="reel-thumb" src="thumbnails/SlleepX.jpeg" alt="Luxury Property Tour" loading="lazy">
+        <video class="reel-video" preload="none" src="https://res.cloudinary.com/idohvgwz/video/upload/v1784301528/HealthX02_2_bfuhno.mp4" muted loop playsinline ></video>
+        <div class="reel-overlay">
+          <span class="reel-badge reel-badge">Commercial</span>
+          <div class="reel-play"><svg width="14" height="16" viewBox="0 0 14 16" fill="none"><path d="M1 1l12 7L1 15V1z" fill="#fff"/></svg></div>
+          <div class="reel-title">Product Ads</div>
+        </div>
+      </div>
+
+      <div class="reel-card" data-thumb="thumbnails/logo5.jpg">
+        <img class="reel-thumb" src="thumbnails/Show room videos.jpeg" alt="Food Brand TVC" loading="lazy">
+        <video class="reel-video" preload="none" src="https://res.cloudinary.com/idohvgwz/video/upload/v1784300927/buggtai_lovfle.mp4" muted loop playsinline ></video>
+        <div class="reel-overlay">
+          <span class="reel-badge reel-badge--commercial">Reels</span>
+          <div class="reel-play"><svg width="14" height="16" viewBox="0 0 14 16" fill="none"><path d="M1 1l12 7L1 15V1z" fill="#fff"/></svg></div>
+          <div class="reel-title">Social Branding</div>
+        </div>
+      </div>
+
+      <div class="reel-card" data-video="/mp4" data-thumb="thumbnails/logo.jpg">
+        <img class="reel-thumb" src="thumbnails/Rooly Website Ads.jpeg" alt="Brand Reel Series" loading="lazy">
+        <video class="reel-video" preload="none" src="https://res.cloudinary.com/idohvgwz/video/upload/v1784317374/Roolyad02_compress_kmk0nr.mp4" muted loop playsinline preload="none"></video>
+        <div class="reel-overlay">
+          <span class="reel-badge reel-badge--commercial">Reels</span>
+          <div class="reel-play"><svg width="14" height="16" viewBox="0 0 14 16" fill="none"><path d="M1 1l12 7L1 15V1z" fill="#fff"/></svg></div>
+          <div class="reel-title">Meta Ads</div>
+        </div>
+      </div>
+
+      <div class="reel-card" data-video="video/anuragdubeycs05.mp4" data-thumb="thumbnails/logo3.jpg">
+        <img class="reel-thumb" src="thumbnails/VocalofJb06.mp4.00_00_03_09.Still001.png" alt="Brand Commercial" loading="lazy">
+        <video class="reel-video" preload="none" src="https://res.cloudinary.com/idohvgwz/video/upload/v1784317329/VocalofJb06_compress_eh2ufw.mp4" muted loop playsinline preload="none"></video>
+        <div class="reel-overlay">
+          <span class="reel-badge reel-badge--realestate">Shorts</span>
+          <div class="reel-play"><svg width="14" height="16" viewBox="0 0 14 16" fill="none"><path d="M1 1l12 7L1 15V1z" fill="#fff"/></svg></div>
+          <div class="reel-title">Creator Shorts</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SELECTED WORK (Portfolio + Filter) ══════════ -->
+<section id="portfolio">
+  <div class="container">
+    <div class="portfolio-header">
+      <div>
+        <span class="section-eyebrow">Our Work</span>
+        <h2 class="section-title">Selected Work</h2>
+      </div>
+      <div class="filter-tabs" id="filterTabs">
+        <button class="filter-tab active" data-filter="all">All</button>
+       
+        <button class="filter-tab" data-filter="commercials">Commercials</button>
+        <button class="filter-tab" data-filter="motion">Social Media</button>
+        <button class="filter-tab" data-filter="realestate">Real Estate</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-strip-wrapper">
+    <div class="portfolio-strip" id="portfolioStrip">
+      <div class="portfolio-track" id="portfolioTrack"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ WORKFLOW ══════════ -->
+<section id="workflow">
+  <div class="container">
+    <div class="workflow-inner">
+      <div>
+        <div class="section-eyebrow">How We Work</div>
+        <h2 class="section-title reveal">Fast Turnaround.<br>Studio-Level<br>Quality.</h2>
+        <div class="workflow-steps">
+          <div class="workflow-step reveal">
+            <div class="step-num">01</div>
+            <div class="step-body"><div class="step-name">Discovery</div><div class="step-desc">We deep-dive into your goals, target audience, platform strategy, and brand identity to align before a single cut is made.</div></div>
+          </div>
+          <div class="workflow-step reveal">
+            <div class="step-num">02</div>
+            <div class="step-body"><div class="step-name">Strategy</div><div class="step-desc">We structure your content for retention — hooks, pacing, narrative arc — everything engineered to keep viewers watching.</div></div>
+          </div>
+          <div class="workflow-step reveal">
+            <div class="step-num">03</div>
+            <div class="step-body"><div class="step-name">Editing</div><div class="step-desc">Precision cuts, tight pacing, sound design, and audio mixing that turns raw footage into high-performance content.</div></div>
+          </div>
+          <div class="workflow-step reveal">
+            <div class="step-num">04</div>
+            <div class="step-body"><div class="step-name">Motion Design</div><div class="step-desc">Custom graphics, animated typography, and visual enhancement that elevates your brand's production value.</div></div>
+          </div>
+          <div class="workflow-step reveal">
+            <div class="step-num">05</div>
+            <div class="step-body"><div class="step-name">Delivery</div><div class="step-desc">Optimized exports for every platform — Instagram, YouTube, Meta Ads — ready to publish and perform.</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="workflow-visual reveal">
+        <div class="wv-frame">
+          <div class="wv-badge">● LIVE EDIT</div>
+          <div class="wv-label">TIMELINE — PROJECT_001.PRPROJ</div>
+          <div class="wv-lines">
+            <div class="wv-line" style="width:100%"></div>
+            <div class="wv-line" style="width:88%"></div>
+            <div class="wv-line" style="width:94%"></div>
+            <div class="wv-line" style="width:76%"></div>
+            <div class="wv-line" style="width:100%"></div>
+            <div class="wv-line" style="width:82%"></div>
+          </div>
+          <div class="wv-turnaround">24–<span>48H</span></div>
+          <div class="wv-sub">Average project turnaround</div>
+          <div class="wv-platforms">
+            <div class="wv-platform-tag">INSTAGRAM</div>
+            <div class="wv-platform-tag">YOUTUBE</div>
+            <div class="wv-platform-tag">META ADS</div>
+            <div class="wv-platform-tag">BROADCAST</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ WHY US ══════════ -->
+<section id="why">
+  <div class="container">
+    <div class="section-eyebrow">Why Chitrasway</div>
+    <h2 class="section-title reveal">Built For<br>Performance</h2>
+    <div class="why-grid">
+      <div class="why-card reveal"><span class="why-icon">⚡</span><div class="why-title">24–48 Hour Turnaround</div><div class="why-desc">Fast without compromise. Studio-grade quality delivered at content creator speed.</div></div>
+      <div class="why-card reveal"><span class="why-icon">🎞</span><div class="why-title">Cinematic Quality</div><div class="why-desc">Every frame is treated as a creative decision. Color, sound, and pacing — all intentional.</div></div>
+      <div class="why-card reveal"><span class="why-icon">🎯</span><div class="why-title">100+ Projects Delivered</div><div class="why-desc">A growing portfolio of brands, creators, and agencies that trust our workflow.</div></div>
+      <div class="why-card reveal"><span class="why-icon">📱</span><div class="why-title">Multi-Platform Optimization</div><div class="why-desc">Every export is tailored for the specific platform it lives on — algorithm and audience-aware.</div></div>
+      <div class="why-card reveal"><span class="why-icon">🎬</span><div class="why-title">Commercial &amp; Creator Focused</div><div class="why-desc">From daily reels to full-scale ad campaigns, our workflow scales to match any ambition.</div></div>
+      <div class="why-card reveal"><span class="why-icon">🔄</span><div class="why-title">Unlimited Revisions</div><div class="why-desc">We iterate until you're 100% satisfied. Your vision, perfected.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ TESTIMONIALS ══════════ -->
+<section id="testimonials">
+  <div class="container">
+    <div class="section-eyebrow">Client Stories</div>
+    <h2 class="section-title reveal">Trusted By<br>Growing Brands</h2>
+    <div class="testimonials-slider">
+      <div class="testimonials-track">
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Chitrasway completely transformed how we approach social content. Our reels went from 2K to 80K average views within two months. The quality is unreal for the turnaround time."</p>
+          <div class="testimonial-author"><div class="author-avatar">R</div><div><div class="author-name">Rahul Verma</div><div class="author-role">Founder, StyleEdge Brand</div></div></div>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"We needed a team that understood both premium aesthetics and performance metrics. Chitrasway delivered our commercial campaign in 36 hours — broadcast ready, no notes."</p>
+          <div class="testimonial-author"><div class="author-avatar">P</div><div><div class="author-name">Priya Sharma</div><div class="author-role">Marketing Director, LuxHome Realty</div></div></div>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"The motion graphics work for our product launch was beyond what I imagined. It looked like a ₹10L production — we spent a fraction of that. Game-changer for our Meta ads."</p>
+          <div class="testimonial-author"><div class="author-avatar">A</div><div><div class="author-name">Arjun Mehta</div><div class="author-role">CEO, NovaBrand India</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONTACT ══════════ -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-left">
+        <div class="section-eyebrow">Start a Project</div>
+        <h2>Let's Elevate Your <span>Next Project</span></h2>
+        <p>Ready to streamline your post-production workflow? Book a discovery call and let's discuss your upcoming projects.</p>
+        <div class="contact-info-item"><div class="ci-icon">✉</div><a href="mailto:chitrasway@gmail.com">chitrasway@gmail.com</a></div>
+        <div class="contact-info-item"><div class="ci-icon">📱</div><a href="https://instagram.com/chitraswaymedia" target="_blank" rel="noopener">@chitraswaymedia</a></div>
+        <div class="contact-info-item"><div class="ci-icon">📍</div>Lucknow, Uttar Pradesh, India</div>
+        <a href="https://wa.me/+919696228120?text=Hi%20Chitrasway%2C%20I%27d%20like%20a%20quote!" target="_blank" rel="noopener" class="wa-contact-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+      <div class="form-card reveal">
+        <div id="formSuccess" class="form-success" style="display:none">
+          <div class="form-success-icon">✓</div>
+          <h3>Message Sent!</h3>
+          <p>We'll get back to you within 24 hours.</p>
+        </div>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/css/intlTelInput.css" />
+
+<style>
+  .iti { width: 100%; display: block; }
+</style>
+
+<form id="contactForm" novalidate>
+  <div class="form-row">
+    <div class="form-group">
+      <label for="fname">Name *</label>
+      <input type="text" id="fname" name="name" placeholder="Your full name" required autocomplete="name"/>
+    </div>
+    <div class="form-group">
+      <label for="fcompany">Company</label>
+      <input type="text" id="fcompany" name="company" placeholder="Brand or agency name" autocomplete="organization"/>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group">
+      <label for="femail">Email *</label>
+      <input type="email" id="femail" name="email" placeholder="your@email.com" required autocomplete="email"/>
+    </div>
+    <div class="form-group">
+      <label for="fphone">Phone</label>
+      <input type="tel" id="fphone" name="phone" autocomplete="tel"/>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group">
+      <label for="ftype">Project Type *</label>
+      <select id="ftype" name="type" required>
+        <option value="" disabled selected>Select type…</option>
+        <option>Short Form Content</option>
+        <option>Commercial Ad</option>
+        <option>Motion Graphics</option>
+        <option>Real Estate</option>
+        <option>YouTube Content</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="fbudget">Budget Range</label>
+      <select id="fbudget" name="budget">
+        <option value="" disabled selected>Select budget…</option>
+        <option>₹10K – ₹25K</option>
+        <option>₹25K – ₹50K</option>
+        <option>₹50K – ₹1L</option>
+        <option>₹1L+</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="ftimeline">Timeline</label>
+    <select id="ftimeline" name="timeline">
+      <option value="" disabled selected>When do you need this?</option>
+      <option>Within 48 hours</option>
+      <option>This week</option>
+      <option>This month</option>
+      <option>Flexible</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="fdetails">Project Details</label>
+    <textarea id="fdetails" name="details" placeholder="Tell us about your project — platform, goals, reference content, anything helpful…"></textarea>
+  </div>
+  <button type="submit" class="form-submit" id="submitBtn">Let's Elevate Your Edit →</button>
+</form>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/js/intlTelInput.min.js"></script>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">CHITRASWAY<span>.</span></div>
+        <p class="footer-tagline">Post-production for brands that refuse to blend in. Based in Lucknow. Working globally.</p>
+        <div class="social-links">
+          <a href="https://instagram.com/chitraswaymedia" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+          <a href="mailto:chitrasway@gmail.com" class="social-link" aria-label="Email">✉</a>
+          <a href="https://www.youtube.com/@chitrasway._" class="social-link" target="_blank" rel="noopener" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Video Editing</a></li>
+          <li><a href="#services">Motion Graphics</a></li>
+          <li><a href="#services">Color Grading</a></li>
+          <li><a href="#services">Commercial Post</a></li>
+          <li><a href="#services">Social Content</a></li>
+          <li><a href="#services">Creative Consulting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#featured-reels">Selected Work</a></li>
+          <li><a href="#workflow">Our Process</a></li>
+          <li><a href="#why">Why Chitrasway</a></li>
+          <li><a href="#testimonials">Client Stories</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="mailto:chitrasway@gmail.com">Get a Quote</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Chitrasway Media. All rights reserved.</div>
+      <div class="footer-insta">Follow: <a href="https://instagram.com/chitraswaymedia" target="_blank" rel="noopener">@chitraswaymedia</a></div>
+    </div>
+  </div>
+</footer>
+<!-- Load Supabase JS Library -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+</script>
+<script src="/ms (1).js"></script>
+</body>
+
+</html>
