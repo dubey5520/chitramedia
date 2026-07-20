@@ -123,65 +123,15 @@ if (typeEl) {
 }
 
 /* ══════════ RING CAROUSEL ══════════ */
-
 const ringClips = [
-  { 
-    label: 'Real Estate Creator',    
-    thumb: 'https://res.cloudinary.com/idohvgwz/image/upload/w_150,h_150/v1784351208/CreatorRE01_z53kgh.png',  
-    videoUrl: 'https://res.cloudinary.com/idohvgwz/video/upload/v1784305686/CreatorRE01_compress_smn76r.mp4',  
-    hue: 38,  
-    sat: 55 
-  },
-  { 
-    label: 'Real Estate Creator', 
-    thumb: 'https://res.cloudinary.com/idohvgwz/image/upload/w_150,h_150/v1784351162/BPTPSkynest_pfjfuo.png', 
-    videoUrl: 'https://res.cloudinary.com/idohvgwz/video/upload/v1784305630/BPTPSkynest_compress_i7nv9w.mp4',    
-    hue: 45,  
-    sat: 45 
-  },
-  { 
-    label: 'AI Commercial',   
-    thumb: 'https://res.cloudinary.com/idohvgwz/image/upload/w_150,h_150/v1784351280/Milk_yejg2y.png', 
-    videoUrl: 'https://res.cloudinary.com/idohvgwz/video/upload/v1784305870/Milk_commercial_tf8byf.mp4',  
-    hue: 200, 
-    sat: 40 
-  },
-  { 
-    label: 'Street Clothing Brand',       
-    thumb: 'https://res.cloudinary.com/idohvgwz/image/upload/w_150,h_150/v1784351100/Fashion_Videos_enmtag.jpg', 
-    videoUrl: 'https://res.cloudinary.com/idohvgwz/video/upload/v1784344137/Ghareeza09_pb3att.mp4',    
-    hue: 16,  
-    sat: 50 
-  },
-  { 
-    label: 'Property Walk Through',       
-    thumb: 'https://res.cloudinary.com/idohvgwz/image/upload/c_fill,w_400,h_225/v1784351342/Real_estate_okhtal.png', 
-    videoUrl: 'https://res.cloudinary.com/idohvgwz/video/upload/v1784305921/Real_estate_pkxi0m.mp4',    
-    hue: 260, 
-    sat: 35 
-  },
-  { 
-    label: 'Real Estate Commercial',   
-    thumb: 'https://res.cloudinary.com/idohvgwz/image/upload/w_150,h_150/v1784351294/plot_video_rynk3b.jpg',  
-    videoUrl: 'https://res.cloudinary.com/idohvgwz/video/upload/v1784344359/Sanskarenclave02June_compress_gzj1fx.mp4' ,       
-    hue: 30,  
-    sat: 48 
-  },
-  { 
-    label: 'Real Estate Event',   
-    thumb: 'https://res.cloudinary.com/idohvgwz/image/upload/w_150,h_150/v1784351378/RoyalgreenTwin02_zrsamk.png',  
-    videoUrl: 'https://res.cloudinary.com/idohvgwz/video/upload/v1784305594/RoyalgreenTwin02_compress_jzpn8i.mp4',       
-    hue: 28,  
-    sat: 52 
-  },
-  { 
-    label: 'Brand Meta Ads',      
-    thumb: 'https://res.cloudinary.com/idohvgwz/image/upload/w_150,h_150/v1784351240/Man_walking_indoor_sportswear_brand_hh9jrf.jpg',  
-    videoUrl: 'https://res.cloudinary.com/idohvgwz/video/upload/v1784344446/RDKLU02sept_ciispc.mp4',           
-    hue: 22,  
-    sat: 42 
-  },
-  
+  { label:'Real Estate Creator', thumb:'https://res.cloudinary.com/idohvgwz/image/upload/v1784351162/BPTPSkynest_pfjfuo.png', video:'https://res.cloudinary.com/idohvgwz/video/upload/v1784305630/BPTPSkynest_compress_i7nv9w.mp4', hue:38, sat:55 },
+  { label:'Real Estate Creator', thumb:'https://res.cloudinary.com/idohvgwz/image/upload/v1784351208/CreatorRE01_z53kgh.png', video:'https://res.cloudinary.com/idohvgwz/video/upload/v1784305686/CreatorRE01_compress_smn76r.mp4', hue:45, sat:45 },
+  { label:'AI Commercial', thumb:'https://res.cloudinary.com/idohvgwz/image/upload/v1784351280/Milk_yejg2y.png', video:'https://res.cloudinary.com/idohvgwz/video/upload/v1784305870/Milk_commercial_tf8byf.mp4', hue:200, sat:40 },
+  { label:'Street Clothing Brand', thumb:'https://res.cloudinary.com/idohvgwz/image/upload/v1784351100/Fashion_Videos_enmtag.jpg', video:'https://res.cloudinary.com/idohvgwz/video/upload/v1784344137/Ghareeza09_pb3att.mp4', hue:16, sat:50 },
+  { label:'Property Walk Through', thumb:'https://res.cloudinary.com/idohvgwz/image/upload/v1784351342/Real_estate_okhtal.png', video:'https://res.cloudinary.com/idohvgwz/video/upload/v1784305921/Real_estate_pkxi0m.mp4', hue:260, sat:35 },
+  { label:'Real Estate Commercial', thumb:'https://res.cloudinary.com/idohvgwz/image/upload/v1784351294/plot_video_rynk3b.jpg', video:'https://res.cloudinary.com/idohvgwz/video/upload/v1784344359/Sanskarenclave02June_compress_gzj1fx.mp4', hue:30, sat:48 },
+  { label:'Real Estate Event', thumb:'https://res.cloudinary.com/idohvgwz/image/upload/v1784351378/RoyalgreenTwin02_zrsamk.png', video:'https://res.cloudinary.com/idohvgwz/video/upload/v1784305594/RoyalgreenTwin02_compress_jzpn8i.mp4', hue:28, sat:52 },
+  { label:'Brand Meta Ads', thumb:'https://res.cloudinary.com/idohvgwz/image/upload/v1784351240/Man_walking_indoor_sportswear_brand_hh9jrf.jpg', video:'https://res.cloudinary.com/idohvgwz/video/upload/v1784344446/RDKLU02sept_ciispc.mp4', hue:22, sat:42 },
 ];
 
 const ringTrack = document.getElementById('ringTrack');
@@ -190,51 +140,22 @@ const ringNowLabel = document.getElementById('ringNowLabel');
 if (ringTrack && ringNowLabel) {
   const RING_N = ringClips.length, RING_R = 440, CARD_W = 240, CARD_H = 426;
   let ringAngle = 0, ringRaf = null, ringFrontIdx = 0;
+  let isHovered = false; // Flag to track hover state
   const ringCards = [];
 
   ringClips.forEach((clip, i) => {
     const card = document.createElement('div');
     card.className = 'ring-card';
-    let vid = null; // stays null until this card is actually interacted with
 
-    if (clip.videoUrl) {
-      // Only a lightweight thumbnail image is loaded up front — no video request yet
-      const thumbImg = document.createElement('img');
-      thumbImg.className = 'ring-thumb-bg';
-      thumbImg.src = clip.thumb;
-      thumbImg.alt = clip.label;
-      thumbImg.loading = 'lazy';
-      card.appendChild(thumbImg);
-
-      // Creates <video>, points it at the real file, and starts playback.
-      // Only ever called for the card currently facing front, and only on interaction.
-      const loadAndPlay = () => {
-        if (vid) { vid.play().catch(() => {}); return; } // already loaded, just resume
-        vid = document.createElement('video');
-        vid.className = 'ring-thumb-bg';
-        vid.muted = true;
-        vid.loop = true;
-        vid.playsInline = true;
-        vid.src = clip.videoUrl; // src is assigned here, at interaction time — this is the actual load
-        card.insertBefore(vid, thumbImg.nextSibling);
-        thumbImg.style.opacity = '0';
-        vid.play().catch(() => {});
-      };
-
-      // Desktop: hover the front card to load + preview
-      card.addEventListener('mouseenter', () => {
-        if (ringFrontIdx === i) loadAndPlay();
-      });
-      card.addEventListener('mouseleave', () => {
-        if (vid) { vid.pause(); vid.currentTime = 0; }
-      });
-
-      // Mobile / click: tapping the front card loads it (first tap) then opens it (second tap)
-      card.addEventListener('click', () => {
-        if (ringFrontIdx !== i) return;
-        if (!vid) { loadAndPlay(); return; }
-        openLightbox(clip.videoUrl);
-      });
+    if (clip.video) {
+      const vid = document.createElement('video');
+      vid.className = 'ring-thumb-bg';
+      vid.src = clip.video; vid.poster = clip.thumb;
+      vid.muted = true; vid.loop = true; vid.playsInline = true; vid.preload = 'none';
+      card.appendChild(vid);
+      
+      card.addEventListener('mouseenter', () => vid.play().catch(() => {}));
+      card.addEventListener('mouseleave', () => { vid.pause(); vid.currentTime = 0; });
     } else {
       const bg = document.createElement('div');
       bg.className = 'ring-thumb-bg';
@@ -250,6 +171,10 @@ if (ringTrack && ringNowLabel) {
     overlay.appendChild(lbl);
     card.appendChild(overlay);
 
+    card.addEventListener('click', () => {
+      if (ringFrontIdx === i && ringClips[i].video) openLightbox(ringClips[i].video);
+    });
+
     ringTrack.appendChild(card);
     ringCards.push(card);
   });
@@ -262,7 +187,7 @@ if (ringTrack && ringNowLabel) {
       const y = Math.sin(theta * 0.5) * -30;
       const depth = (z + RING_R) / (2 * RING_R);
       const scale = 0.50 + depth * 0.68;
-      const opacity = 0.22 + depth * 0.78;
+      const opacity= 0.22 + depth * 0.78;
       card.style.cssText = `position:absolute;width:${CARD_W}px;height:${CARD_H}px;border-radius:12px;overflow:hidden;cursor:pointer;background:#141414;transform:translate(${x-CARD_W/2}px,${y-CARD_H/2}px) scale(${scale.toFixed(3)});opacity:${opacity.toFixed(3)};z-index:${Math.round(depth*100)};transition:border-color .35s,box-shadow .35s;`;
       const front = z > RING_R * 0.86;
       card.style.border = front ? '1.5px solid rgba(201,168,76,.8)' : '1.5px solid rgba(201,168,76,0)';
@@ -273,8 +198,11 @@ if (ringTrack && ringNowLabel) {
   }
 
   function ringAutoRotate() { 
-    ringAngle -= 0.14; 
-    ringPosition(ringAngle); 
+    // Only update the angle if the mouse is not hovering
+    if (!isHovered) {
+      ringAngle -= 0.14; 
+      ringPosition(ringAngle); 
+    }
     ringRaf = requestAnimationFrame(ringAutoRotate); 
   }
 
@@ -305,6 +233,10 @@ if (ringTrack && ringNowLabel) {
   let rTouchX = null;
   const ringScene = document.getElementById('ringScene');
   if (ringScene) {
+    // Pause auto-rotation on hover
+    ringScene.addEventListener('mouseenter', () => isHovered = true);
+    ringScene.addEventListener('mouseleave', () => isHovered = false);
+
     ringScene.addEventListener('touchstart', e => { rTouchX = e.touches[0].clientX; }, { passive: true });
     ringScene.addEventListener('touchend', e => {
       if (rTouchX === null) return;
