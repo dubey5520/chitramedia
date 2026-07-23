@@ -1,0 +1,21 @@
+{
+  "name": "chitramedia",
+  "version": "1.0.0",
+  "description": "Chitrasway Media - Premier post-production studio in Lucknow",
+  "type": "module",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'No build step required for static site'",
+    "lint": "echo 'No linting configured'"
+  },
+  "keywords": [
+    "video-editing",
+    "post-production",
+    "motion-graphics"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/analytics": "^1.3.1"
+  }
+}
